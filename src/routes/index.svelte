@@ -126,10 +126,15 @@
 
   .exportButton img {
     margin-right: 8px;
+    transition: all 150ms linear;
   }
 
   .exportButton:hover {
     opacity: .85;
+  }
+
+  .exportButton:hover img {
+    transform: scale(1.08);
   }
 
   @media screen and (max-width: 428px) {

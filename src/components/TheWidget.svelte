@@ -5,7 +5,7 @@
 
 
 <div class="mainContainerWidget">
-  <img height="24" src="static\me.png" alt="me"> <p>Get 1:1 design help</p>
+  <img height="24" src="static\me.png" alt="me"> <p>How to sell more design?</p>
 </div>
 
 

@@ -112,6 +112,7 @@
       0px 3.2556px 10.0172px rgba(0, 0, 0, 0.075),
       0px 1.72903px 5.32008px rgba(0, 0, 0, 0.0605839),
       0px 0.719487px 2.21381px rgba(0, 0, 0, 0.0421718);
+      transition: all 150ms linear;
   }
   /***** Thumb Styles *****/
   /***** Firefox *****/
@@ -121,7 +122,17 @@
       background-color: white;
       height: 16px;
       width: 16px;
+      transition: all 150ms linear;
   }
+
+  .mainContainerCursor:hover input[type="range"]::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+
+  .mainContainerCursor:hover input[type="range"]::-moz-range-thumb {
+    transform: scale(1.2);
+  }
+
 
   .progressBar {
     height: 4px;
