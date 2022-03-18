@@ -8,7 +8,7 @@ const CursorValues = writable( {
   amplitudeValue : 177,
   lengthValue : 99,
   phaseValue : 20,
-  strokeValue : 6,
+  strokeValue : 16,
 });
 
 export default CursorValues;
