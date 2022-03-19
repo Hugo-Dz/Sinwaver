@@ -6,7 +6,7 @@
   import TheWidget from "../components/TheWidget.svelte";
 
   let storedSVGpath;
-  const enableMediumLink = false;
+  const enableMediumLink = false; //Change text for seo keywords
 
   //Utiliser mes stores pour attriber leurs valeurs à une variable de ce composant. Si les stores changent, il sont rafraichis automatiquement
   SVGpath.subscribe((dataFromStore) => {
