@@ -47,7 +47,7 @@
 
 <div class="mainContainerCursor">
 
-  <img style="margin-right: 8px;" src={minIconPath} alt="min icon" />
+  <img style="margin-right: 8px;" src="/amplitude icon min.svg" alt="min icon" />
   <input type="range" min={minValue} max={maxValue} bind:value={cursorValue} on:input={udpateStore} />
   <div class="progressBar" style="width: {progressBarWidth}px"></div>
   <img style="margin-left: 8px;" src={maxIconPath} alt="max icon" />
