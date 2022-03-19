@@ -6,6 +6,7 @@
   import TheWidget from "../components/TheWidget.svelte";
 
   let storedSVGpath;
+  const enableMediumLink = false;
 
   //Utiliser mes stores pour attriber leurs valeurs à une variable de ce composant. Si les stores changent, il sont rafraichis automatiquement
   SVGpath.subscribe((dataFromStore) => {
@@ -35,13 +36,17 @@
 
 
 <div class="fullViewportContainer">
+  
   <div class="contentContainer">
-    <a href="https://www.google.com/" target="_blank"
-      ><div class="linkContainer">
+
+    {#if enableMediumLink}
+    <a href="https://www.google.com/" target="_blank">
+      <div class="linkContainer">
         <p>How this app was made?</p>
         <img src="static\arrow.svg" alt="arrow icon" />
-      </div></a
-    >
+      </div>
+    </a>
+    {/if}
 
     <TheCanva />
     <TheSettings />
