@@ -17,7 +17,7 @@
 <div class="mainContainerSettings">
 
 
-  <Cursor cursorSetting="amplitudeValue" initialValue={storedValues.amplitudeValue} minValue={0} maxValue={450} minIconPath="static\amplitude icon min.svg" maxIconPath="static\amplitude icon max.svg" />
+  <Cursor cursorSetting="amplitudeValue" initialValue={storedValues.amplitudeValue} minValue={0} maxValue={450} minIconPath="static/amplitude icon min.svg" maxIconPath="static/amplitude icon max.svg" />
   <Cursor cursorSetting="lengthValue" initialValue={storedValues.lengthValue} minValue={7} maxValue={300} minIconPath="static\length icon min.svg" maxIconPath="static\length icon max.svg" />
   <Cursor cursorSetting="phaseValue" initialValue={storedValues.phaseValue} minValue={20} maxValue={1560} minIconPath="static\start icon min.svg" maxIconPath="static\start icon max.svg" />
   <Cursor cursorSetting="strokeValue" initialValue={storedValues.strokeValue} minValue={1} maxValue={40} minIconPath="static\stroke icon min.svg" maxIconPath="static\stroke icon max.svg" />
