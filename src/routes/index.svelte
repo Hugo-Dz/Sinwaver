@@ -1,5 +1,4 @@
 <script>
- 
   import SVGpath from "../stores/SVGpathStore";
 
   import TheCanva from "../components/TheCanva.svelte";
@@ -13,33 +12,29 @@
     storedSVGpath = dataFromStore;
   });
 
-
   function downloadSVGpath() {
-
     const pathToString = new XMLSerializer().serializeToString(storedSVGpath);
 
     var blob = new Blob([pathToString], { type: "image/svg+xml" });
 
-    var a = document.createElement('a');
+    var a = document.createElement("a");
     a.download = "SVG curve";
     a.href = URL.createObjectURL(blob);
-    a.dataset.downloadurl = ["image/svg+xml", a.download, a.href].join(':');
+    a.dataset.downloadurl = ["image/svg+xml", a.download, a.href].join(":");
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    setTimeout(function() { URL.revokeObjectURL(a.href); }, 1500);
-
+    setTimeout(function () {
+      URL.revokeObjectURL(a.href);
+    }, 1500);
   }
-
-
 </script>
 
 
 
 
 <div class="fullViewportContainer">
-  
   <div class="contentContainer">
     <a href="https://www.google.com/" target="_blank"
       ><div class="linkContainer">
@@ -51,10 +46,11 @@
     <TheCanva />
     <TheSettings />
 
-    <button on:click={downloadSVGpath} class="exportButton"><img src="static\export icon.svg" alt="export icon" />Export</button>
+    <button on:click={downloadSVGpath} class="exportButton"
+      ><img src="static\export icon.svg" alt="export icon" />Export</button
+    >
 
     <TheWidget />
-
   </div>
 </div>
 
@@ -92,7 +88,6 @@
     font-size: 12.2px;
     line-height: 16px;
     margin-bottom: 40px;
-    
   }
 
   .linkContainer {
@@ -107,10 +102,11 @@
   }
 
   .exportButton {
+    border-radius: 50px;
     cursor: pointer;
     border: none;
-    background-color: #5863f8;
-    color: #FCFCFC;
+    background: linear-gradient(180deg, #6c76f9 -15.62%, #5863f8 112.5%);
+    color: #fcfcfc;
     font-family: Inter;
     font-weight: bold;
     font-size: 16px;
@@ -120,8 +116,13 @@
     align-items: center;
     padding: 12px 24px;
     width: min-content;
-    border-radius: 50px;
     transition: all 150ms linear;
+    box-shadow: 0px 7px 7px rgba(88, 99, 248, 0.06),
+      0px 4.53704px 4.09954px rgba(88, 99, 248, 0.0455556),
+      0px 2.6963px 2.22963px rgba(88, 99, 248, 0.0364444),
+      0px 1.4px 1.1375px rgba(88, 99, 248, 0.03),
+      0px 0.57037px 0.57037px rgba(88, 99, 248, 0.0235556),
+      0px 0.12963px 0.275463px rgba(88, 99, 248, 0.0144444);
   }
 
   .exportButton img {
@@ -130,7 +131,7 @@
   }
 
   .exportButton:hover {
-    opacity: .85;
+    opacity: 0.9;
   }
 
   .exportButton:hover img {
@@ -138,7 +139,6 @@
   }
 
   @media screen and (max-width: 428px) {
-
     .fullViewportContainer {
       width: 100%;
       height: auto;
@@ -152,7 +152,5 @@
     .exportButton {
       margin-bottom: 128px;
     }
-
   }
-
 </style>
