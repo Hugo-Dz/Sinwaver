@@ -49,7 +49,7 @@
 
   <img style="margin-right: 8px;" src={minIconPath} alt="min icon" />
   <input type="range" min={minValue} max={maxValue} bind:value={cursorValue} on:input={udpateStore} id="cursor" />
-  <label for="cursor">label (hidden)</label>
+  <label for="cursor"> {cursorSetting} </label>
   <div class="progressBar" style="width: {progressBarWidth}px"></div>
   <img style="margin-left: 8px;" src={maxIconPath} alt="max icon" />
 
