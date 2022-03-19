@@ -8,7 +8,7 @@
 
 {#if enableWidget}
   <div class="mainContainerWidget">
-    <img height="24" src="static\me.png" alt="me" />
+    <img height="24" width="24" src="static\me.png" alt="me" />
     <p>How to sell more design?</p>
   </div>
 {/if}

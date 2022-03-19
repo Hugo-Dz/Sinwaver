@@ -57,6 +57,11 @@
 
 <style>
 
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
   .mainContainerCursor {
     display: flex;
     flex-direction: row;

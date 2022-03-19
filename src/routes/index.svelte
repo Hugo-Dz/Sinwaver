@@ -43,7 +43,7 @@
     <a href="https://www.google.com/" target="_blank">
       <div class="linkContainer">
         <p>How this app was made?</p>
-        <img src="static\arrow.svg" alt="arrow icon" />
+        <img height="12" width="12" src="static\arrow.svg" alt="arrow icon" />
       </div>
     </a>
     {/if}
@@ -51,8 +51,7 @@
     <TheCanva />
     <TheSettings />
 
-    <button on:click={downloadSVGpath} class="exportButton"
-      ><img src="/export icon.svg" alt="export icon" />Export</button
+    <button on:click={downloadSVGpath} class="exportButton"><img width="24" height="24" src="/export icon.svg" alt="export icon" />Export</button
     >
 
     <TheWidget />
