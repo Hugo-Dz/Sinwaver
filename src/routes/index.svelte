@@ -6,7 +6,6 @@
   import TheWidget from "../components/TheWidget.svelte";
 
   let storedSVGpath;
-  const enableMediumLink = false; //Change text for seo keywords
 
   //Utiliser mes stores pour attriber leurs valeurs à une variable de ce composant. Si les stores changent, il sont rafraichis automatiquement
   SVGpath.subscribe((dataFromStore) => {
@@ -39,14 +38,14 @@
   
   <div class="contentContainer">
 
-    {#if enableMediumLink}
+
     <a href="https://www.google.com/" target="_blank">
       <div class="linkContainer">
         <p>How this app was made?</p>
         <img height="12" width="12" src="static\arrow.svg" alt="arrow icon" />
       </div>
     </a>
-    {/if}
+
 
     <TheCanva />
     <TheSettings />
@@ -92,6 +91,7 @@
     font-size: 12.2px;
     line-height: 16px;
     margin-bottom: 40px;
+    visibility: hidden;
   }
 
   .linkContainer {
