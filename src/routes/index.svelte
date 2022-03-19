@@ -52,7 +52,7 @@
     <TheSettings />
 
     <button on:click={downloadSVGpath} class="exportButton"
-      ><img src="static\export icon.svg" alt="export icon" />Export</button
+      ><img src="/export icon.svg" alt="export icon" />Export</button
     >
 
     <TheWidget />
