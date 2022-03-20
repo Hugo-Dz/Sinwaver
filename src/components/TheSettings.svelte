@@ -50,7 +50,7 @@
       row-gap: 40px;
       width: 272px;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
   }

@@ -106,7 +106,7 @@
   }
 
   .exportButton {
-    border-radius: 50px;
+    border-radius: 16px;
     cursor: pointer;
     border: none;
     background: linear-gradient(180deg, #6c76f9 -15.62%, #5863f8 112.5%);
@@ -118,6 +118,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 12px 24px;
     width: min-content;
     transition: all 150ms linear;
@@ -148,9 +149,13 @@
       height: auto;
     }
 
+    .exportButton {
+      width: 100%;
+    }
+
     a {
       margin-bottom: 24px;
-      margin-top: 56px;
+      margin-top: 48px;
     }
 
     .exportButton {

@@ -143,7 +143,6 @@
     transform: scale(1.2);
   }
 
-
   .progressBar {
     height: 4px;
     border-radius: 50px;

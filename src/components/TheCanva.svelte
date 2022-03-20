@@ -177,7 +177,7 @@
   @media screen and (max-width: 428px) {
 
     .canvasContainer {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
 
     canvas {
