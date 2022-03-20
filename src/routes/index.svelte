@@ -13,8 +13,6 @@
   });
 
   function downloadSVGpath() {
-
-    splitbee.track("Click CTA");
     
     const pathToString = new XMLSerializer().serializeToString(storedSVGpath);
 
@@ -46,7 +44,7 @@
     <a href="https://www.google.com/" target="_blank">
       <div class="linkContainer">
         <p>How this app was made?</p>
-        <img height="12" width="12" src="static\arrow.svg" alt="arrow icon" />
+        <img height="12" width="12" src="arrow.svg" alt="arrow icon" />
       </div>
     </a>
 
