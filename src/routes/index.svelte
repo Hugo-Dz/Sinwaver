@@ -13,6 +13,9 @@
   });
 
   function downloadSVGpath() {
+
+    splitbee.track("Click CTA");
+    
     const pathToString = new XMLSerializer().serializeToString(storedSVGpath);
 
     var blob = new Blob([pathToString], { type: "image/svg+xml" });
@@ -29,6 +32,7 @@
       URL.revokeObjectURL(a.href);
     }, 1500);
   }
+
 </script>
 
 
@@ -50,7 +54,7 @@
     <TheCanva />
     <TheSettings />
 
-    <button on:click={downloadSVGpath} class="exportButton"><img width="24" height="24" src="/export icon.svg" alt="export icon" />Export</button
+    <button data-splitbee-event="Click CTA" on:click={downloadSVGpath} class="exportButton"><img width="24" height="24" src="/export icon.svg" alt="export icon" />Export</button
     >
 
     <TheWidget />
