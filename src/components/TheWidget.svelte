@@ -1,7 +1,7 @@
 <script>
 
   const enableWidget = true;
-  let showOverlay = true;
+  let showOverlay = false;
 
   function openModal () {
     showOverlay = true;
