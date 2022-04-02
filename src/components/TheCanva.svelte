@@ -9,7 +9,7 @@
   const debugMode = false;
   const canvasSize = {
     width : 1560,
-    height : 1004,
+    height : 804,
   };
 
   let storedValues;
@@ -143,12 +143,12 @@
 
 <style>
   .canvasContainer {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 
   canvas {
     width: 780px;
-    height: 502px;
+    height: 402px;
     box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.03),
       0px 7.51997px 33.4221px rgba(0, 0, 0, 0.0215656),
       0px 4.02054px 17.869px rgba(0, 0, 0, 0.0178832),

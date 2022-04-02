@@ -92,7 +92,7 @@
     text-decoration: none;
     font-size: 12.2px;
     line-height: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     visibility: hidden;
   }
 
