@@ -17,7 +17,7 @@
 
 {#if enableWidget}
   <div class="mainContainerWidget" on:click={openModal}>
-    <img height="24" width="24" src="static\me.png" alt="me" />
+    <img height="24" width="24" src="me.png" alt="me" />
     <p style="color: #FCFCFC">Get 1:1 design help</p>
   </div>
 {/if}
@@ -229,7 +229,7 @@
 
   .overlay {
       width: 100vw;
-      height: 100vh;
+      height: 200vh;
       background-color: #2D2F53;
       position: fixed;
       z-index: 3;
