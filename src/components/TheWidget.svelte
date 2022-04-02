@@ -271,6 +271,7 @@
   }
 
   .modalContainer {
+    position: relative;
     z-index: 4;
     padding: 48px;
     background-color: white;
@@ -295,8 +296,9 @@
       box-sizing: border-box;
       bottom: 0;
       margin-bottom: 0px;
-      top: none;
       border-radius: 40px 40px 0px 0px;
+      overflow: scroll;
+      height: 440px;
     }
 
   }
