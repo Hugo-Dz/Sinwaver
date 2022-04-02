@@ -1,7 +1,7 @@
 <script>
 
   const enableWidget = true;
-  let showOverlay = false;
+  let showOverlay = true;
 
   function openModal () {
     showOverlay = true;
@@ -52,10 +52,10 @@
 
         <div class="featuresContainer">
           <ul>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p>Visual design audit with a fresh eye.</p></li>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p>Spot tiny design missings.</p></li>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p>Tips & improvement suggestions.</p></li>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p>Includes a redesign of one view.</p></li>
+            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Visual design audit with a fresh eye.</p></li>
+            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Spot tiny design missings.</p></li>
+            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Tips & improvement suggestions.</p></li>
+            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Includes a redesign of one view.</p></li>
             <li style="margin-bottom: 0px;"><p>All packed in a Notion report</p></li>   
           </ul>
         </div>
@@ -66,6 +66,7 @@
             <p style="font-size: 24px; line-height: 32px; font-weight: bold; color: #333333;">$250</p>
           </div>
           <a href="https://buy.stripe.com/3cs6qy9XW3b77ja6op" class="startButton">Get started</a>
+          <p style="text-align: center; margin-top: 8px;">duprez.hugo@gmail.com</p>
         </div>
 
       </div>
@@ -277,7 +278,7 @@
     margin-right: auto;
     margin-left: auto;
     bottom: 50%;
-    margin-bottom: -308px;
+    margin-bottom: -312px;
     border-radius: 40px;
     box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.03), 0px 7.51997px 33.4221px rgba(0, 0, 0, 0.0215656), 0px 4.02054px 17.869px rgba(0, 0, 0, 0.0178832), 0px 2.25388px 10.0172px rgba(0, 0, 0, 0.015), 0px 1.19702px 5.32008px rgba(0, 0, 0, 0.0121168), 0px 0.498106px 2.21381px rgba(0, 0, 0, 0.00843437);
   }
