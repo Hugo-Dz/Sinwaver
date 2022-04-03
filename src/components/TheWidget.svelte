@@ -32,6 +32,10 @@
 
     <div class="contentContainer">
 
+      <div class="topBar">
+        <div class="notchBar"></div>
+      </div>
+
       <div class="mainContainer">
         <div class="headContainer">
           <p class="title">1:1 design review of <br> what you build</p>
@@ -77,6 +81,7 @@
       </div>
 
     </div>
+
 
   </div>
 {/if}
@@ -216,7 +221,7 @@
   .contentContainer {
     display: flex;
     flex-direction: column;
-
+    padding: 48px;
   }
 
   .testimonialsContainer {
@@ -271,9 +276,7 @@
   }
 
   .modalContainer {
-    position: relative;
     z-index: 4;
-    padding: 48px;
     background-color: white;
     position: fixed;
     margin-right: auto;
@@ -285,6 +288,15 @@
   }
 
   @media screen and (max-width: 428px) {
+
+    .contentContainer {
+    position: relative;
+    padding-top: 0px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 48px;
+
+    }
 
     .mainContainerWidget {
       bottom: 4%;
@@ -300,6 +312,28 @@
       overflow: scroll;
       height: 440px;
     }
+    
+    .topBar {
+      margin-bottom: 16px;
+      height: 32px;
+      position: sticky;
+      background: linear-gradient(180deg, #FFFFFF 8.85%, rgba(255, 255, 255, 0) 100%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .notchBar {
+      width: 48px;
+      height: 6px;
+      background-color: rgb(177, 177, 177);
+      margin-top: 8px;
+      border-radius: 50px;
+    }
+
 
   }
 </style>
