@@ -157,7 +157,7 @@
 
     a {
       margin-bottom: 24px;
-      margin-top: 48px;
+      margin-top: 16px;
     }
 
     .exportButton {
