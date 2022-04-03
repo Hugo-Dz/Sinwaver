@@ -1,34 +1,115 @@
 <script>
+  import { onMount, afterUpdate } from 'svelte/internal';
+  import anime from "animejs";
 
   const enableWidget = true;
   let showOverlay = false;
 
-  function openModal () {
-    showOverlay = true;
+  //Get html elements for animations
+  let widget;
+  let overlay;
+  let modal;
+
+  onMount(() => {
+
+    let widgetAnimation = anime({
+      targets: widget,
+      translateY: [48, 0],
+      opacity: [0, 1],
+      duration: 2000,
+      delay: 800,
+
+    });
+
+    
+
+  });
+
+  function switchModal () {
+    if(!showOverlay) {
+      let overlayIn = anime({
+        targets: overlay,
+        opacity: [0, 0.6],
+        duration: 300,
+        easing: 'easeInOutQuad',
+
+      });
+      if(window.screen.width > 430) {
+        //animate modal in for desktop
+        let modalIn = anime({
+          targets: modal,
+          translateY: [50, 0],
+          opacity: [0, 1],
+          duration: 2000,
+          
+        })
+      } else {
+        //animate modal in for mobile
+        let modalInMobile = anime({
+          targets: modal,
+          translateY: [500, 0],
+          opacity: [0, 1],
+          easing: 'spring(1, 100, 20, 0)'
+
+        })
+      }
+      showOverlay = true;
+      overlay.style.pointerEvents = "auto";
+      modal.style.pointerEvents = "auto";
+      
+    } else if (showOverlay) {
+      let overlayOut = anime({
+        targets: overlay,
+        opacity: [0.6, 0],
+        duration: 300,
+        easing: 'easeInOutQuad'
+
+      });
+      if(window.screen.width > 430) {
+        //animate modal out for desktop
+        let modalOut = anime({
+          targets: modal,
+          translateY: [-50],
+          opacity: [1, 0],
+          duration: 2000,
+          
+        })
+      } else {
+        //animate modal out for mobile
+        let modalOutMobile = anime({
+          targets: modal,
+          translateY: [0, 500],
+          opacity: [1, 0],
+          easing: 'spring(1, 100, 20, 0)'
+
+        })
+
+      }
+      showOverlay = false;
+      overlay.style.pointerEvents = "none";
+      modal.style.pointerEvents = "none";
+
+    }
   }
 
-  function closeModal () {
-    showOverlay = false;
-  }
 
 </script>
 
 
 
 {#if enableWidget}
-  <div class="mainContainerWidget" on:click={openModal}>
+  <div bind:this={widget} class="mainContainerWidget" on:click={switchModal}>
     <img height="24" width="24" src="me.png" alt="me" />
-    <p style="color: #FCFCFC">Get 1:1 design help</p>
+    <p style="color: #FCFCFC; overflow:hidden;">Get 1:1 design help</p>
   </div>
 {/if}
 
 
-{#if showOverlay}
-  <div class="overlay" on:click={closeModal}></div>
-{/if}
 
-{#if showOverlay}
-  <div class="modalContainer">
+<div bind:this={overlay} class="overlay" on:click={switchModal}></div>
+
+
+<div bind:this={modal} class="modalContainer">
 
     <div class="contentContainer">
 
@@ -82,9 +163,9 @@
 
     </div>
 
+</div>
 
-  </div>
-{/if}
+
 
 
 <style>
@@ -234,19 +315,19 @@
   }
 
   .overlay {
+      pointer-events: none;
+      opacity: 0;
       width: 100vw;
       height: 200vh;
       background-color: #2D2F53;
       position: fixed;
       z-index: 3;
-      opacity: 0.6;
       bottom: 0;
       left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: ease-in-out 2000ms;
     }
 
   .mainContainerWidget {
@@ -276,6 +357,8 @@
   }
 
   .modalContainer {
+    opacity: 0;
+    pointer-events: none;
     z-index: 4;
     background-color: white;
     position: fixed;
