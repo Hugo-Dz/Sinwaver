@@ -71,9 +71,12 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    align-items: center;
   }
 
   input[type="range"] {
+    padding-top: 16px;
+    padding-bottom: 16px;
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
@@ -81,6 +84,16 @@
     width: 80px;
     margin: 0px;
     
+  }
+
+  .progressBar {
+    height: 4px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #5863F8;
+    top: 16px;
+    left: 32px;
+    z-index: 0;
   }
 
 
@@ -141,16 +154,6 @@
 
   .mainContainerCursor:hover input[type="range"]::-moz-range-thumb {
     transform: scale(1.2);
-  }
-
-  .progressBar {
-    height: 4px;
-    border-radius: 50px;
-    position: absolute;
-    background-color: #5863F8;
-    top: 10px;
-    left: 32px;
-    z-index: 0;
   }
 
 </style>
