@@ -33,7 +33,10 @@
     display: flex;
     flex-direction: row;
 
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     border: 2px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -47,7 +50,7 @@
 
     .mainContainerSettings {
       flex-direction: column;
-      row-gap: 40px;
+      row-gap: 32px;
       width: 272px;
       align-items: center;
       margin-bottom: 32px;
