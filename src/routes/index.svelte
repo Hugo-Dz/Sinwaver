@@ -43,7 +43,7 @@
 
     <a href="https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb" target="_blank">
       <div class="linkContainer">
-        <p>How this app was made?</p>
+        <p>How this app was made</p>
         <img height="12" width="12" src="arrow.svg" alt="arrow icon" />
       </div>
     </a>
