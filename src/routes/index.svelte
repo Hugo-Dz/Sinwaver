@@ -41,7 +41,7 @@
   <div class="contentContainer">
 
 
-    <a href="https://www.google.com/" target="_blank">
+    <a href="https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb" target="_blank">
       <div class="linkContainer">
         <p>How this app was made?</p>
         <img height="12" width="12" src="arrow.svg" alt="arrow icon" />
@@ -93,7 +93,6 @@
     font-size: 12.2px;
     line-height: 16px;
     margin-bottom: 32px;
-    visibility: hidden;
   }
 
   .linkContainer {
@@ -157,7 +156,7 @@
 
     a {
       margin-bottom: 24px;
-      margin-top: 16px;
+      margin-top: 32px;
     }
 
     .exportButton {
