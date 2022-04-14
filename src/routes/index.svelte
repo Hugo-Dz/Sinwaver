@@ -41,7 +41,7 @@
   <div class="contentContainer">
 
 
-    <a href="https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb" target="_blank">
+    <a data-splitbee-event="Click Medium link" href="https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb" target="_blank">
       <div class="linkContainer">
         <p>How this app was made</p>
         <img height="12" width="12" src="arrow.svg" alt="arrow icon" />
@@ -52,8 +52,7 @@
     <TheCanva />
     <TheSettings />
 
-    <button data-splitbee-event="Click CTA" on:click={downloadSVGpath} class="exportButton"><img width="24" height="24" src="/export icon.svg" alt="export icon" />Export</button
-    >
+    <button data-splitbee-event="Click CTA" on:click={downloadSVGpath} class="exportButton"><img width="24" height="24" src="/export icon.svg" alt="export icon" />Export</button>
 
     <TheWidget />
   </div>
