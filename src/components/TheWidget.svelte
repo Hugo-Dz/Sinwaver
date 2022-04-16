@@ -1,5 +1,5 @@
 <script>
-  import { onMount, afterUpdate } from 'svelte/internal';
+  import { onMount, afterUpdate } from "svelte/internal";
   import anime from "animejs";
 
   const enableWidget = true;
@@ -11,165 +11,192 @@
   let modal;
 
   onMount(() => {
-
-    let widgetAnimation = anime({
-      targets: widget,
-      translateY: [48, 0],
-      opacity: [0, 1],
-      duration: 2000,
-      delay: 800,
-
+    let widgetBreathAnimation = anime({
+      targets: '.mainContainerWidget',
+      translateY: 12,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+      duration: 3000
     });
-
-    
-
   });
 
-  function switchModal () {
-    if(!showOverlay) {
+  function switchModal() {
+    if (!showOverlay) {
       let overlayIn = anime({
         targets: overlay,
         opacity: [0, 0.6],
         duration: 300,
-        easing: 'easeInOutQuad',
-
+        easing: "easeInOutQuad",
       });
-      if(window.screen.width > 430) {
+      if (window.screen.width > 430) {
         //animate modal in for desktop
         let modalIn = anime({
           targets: modal,
           translateY: [50, 0],
           opacity: [0, 1],
           duration: 2000,
-          
-        })
+        });
       } else {
         //animate modal in for mobile
         let modalInMobile = anime({
           targets: modal,
           translateY: [500, 0],
           opacity: [0, 1],
-          easing: 'spring(1, 100, 20, 0)'
-
-        })
+          easing: "spring(1, 100, 20, 0)",
+        });
       }
       showOverlay = true;
       overlay.style.pointerEvents = "auto";
       modal.style.pointerEvents = "auto";
-      
     } else if (showOverlay) {
       let overlayOut = anime({
         targets: overlay,
         opacity: [0.6, 0],
         duration: 300,
-        easing: 'easeInOutQuad'
-
+        easing: "easeInOutQuad",
       });
-      if(window.screen.width > 430) {
+      if (window.screen.width > 430) {
         //animate modal out for desktop
         let modalOut = anime({
           targets: modal,
           translateY: [-50],
           opacity: [1, 0],
           duration: 2000,
-          
-        })
+        });
       } else {
         //animate modal out for mobile
         let modalOutMobile = anime({
           targets: modal,
           translateY: [0, 500],
           opacity: [1, 0],
-          easing: 'spring(1, 100, 20, 0)'
-
-        })
-
+          easing: "spring(1, 100, 20, 0)",
+        });
       }
       showOverlay = false;
       overlay.style.pointerEvents = "none";
       modal.style.pointerEvents = "none";
-
     }
   }
-
-
 </script>
 
-
-
 {#if enableWidget}
-  <div bind:this={widget} class="mainContainerWidget" on:click={switchModal}>
+  <div data-splitbee-event="Click widget" bind:this={widget} class="mainContainerWidget" on:click={switchModal}>
     <img height="24" width="24" src="me.png" alt="me" />
-    <p style="color: #FCFCFC; overflow:hidden;">Get 1:1 design help</p>
+    <p style="overflow:hidden; color : #333333; display : flex; flex-direction: row; justify-content:start align-items:center">Make your app more <img style="margin-left : 4px;" src="pop.png" alt="pop icon" height="16px"></p>
   </div>
 {/if}
 
-
-
-<div bind:this={overlay} class="overlay" on:click={switchModal}></div>
-
+<div bind:this={overlay} class="overlay" on:click={switchModal} />
 
 <div bind:this={modal} class="modalContainer">
+  <div class="contentContainer">
+    <div class="topBar">
+      <div class="notchBar" />
+    </div>
 
-    <div class="contentContainer">
-
-      <div class="topBar">
-        <div class="notchBar"></div>
-      </div>
-
-      <div class="mainContainer">
-        <div class="headContainer">
-          <p class="title">1:1 design review of <br> what you build</p>
-          <div class="hugoContainer">
-            <img height="40" width="40" src="me.png" alt="me">
-            <div class="rightContainer">
-              <a href="https://dribbble.com/HugoDuprez/shots" target="_blank">Hugo Duprez</a>
-              <div class="starsContainer">
-                <img class="starImage" width="12" height="12" src="star icon.svg" alt="star icon">
-                <img class="starImage" width="12" height="12" src="star icon.svg" alt="star icon">
-                <img class="starImage" width="12" height="12" src="star icon.svg" alt="star icon">
-                <img class="starImage" width="12" height="12" src="star icon.svg" alt="star icon">
-                <img class="starImage" width="12" height="12" src="star icon.svg" alt="star icon">
-              </div>
+    <div class="mainContainer">
+      <div class="headContainer">
+        <p class="title">1:1 design review of <br /> what you build</p>
+        <div class="hugoContainer">
+          <img height="40" width="40" src="me.png" alt="me" />
+          <div class="rightContainer">
+            <a href="https://dribbble.com/HugoDuprez/shots" target="_blank"
+              >Hugo Duprez</a
+            >
+            <div class="starsContainer">
+              <img
+                class="starImage"
+                width="12"
+                height="12"
+                src="star icon.svg"
+                alt="star icon"
+              />
+              <img
+                class="starImage"
+                width="12"
+                height="12"
+                src="star icon.svg"
+                alt="star icon"
+              />
+              <img
+                class="starImage"
+                width="12"
+                height="12"
+                src="star icon.svg"
+                alt="star icon"
+              />
+              <img
+                class="starImage"
+                width="12"
+                height="12"
+                src="star icon.svg"
+                alt="star icon"
+              />
+              <img
+                class="starImage"
+                width="12"
+                height="12"
+                src="star icon.svg"
+                alt="star icon"
+              />
             </div>
           </div>
         </div>
-
-        <div class="featuresContainer">
-          <ul>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Visual design audit with a fresh eye.</p></li>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Spot tiny design missings.</p></li>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Tips & improvement suggestions.</p></li>
-            <li><img class="checkIcon" src="check icon.svg" alt="check icon"><p style="color: #333333">Includes a redesign of one view.</p></li>
-            <li style="margin-bottom: 0px;"><p>All packed in a Notion report</p></li>   
-          </ul>
-        </div>
-
-        <div class="priceContainer">
-          <div class="totalPriceContainer">
-            <p>Total price</p>
-            <p style="font-size: 24px; line-height: 32px; font-weight: bold; color: #333333;">$250</p>
-          </div>
-          <a href="https://buy.stripe.com/3cs6qy9XW3b77ja6op" class="startButton">Get started</a>
-          <p style="text-align: center; margin-top: 8px;">duprez.hugo@gmail.com</p>
-        </div>
-
       </div>
 
-      <div class="testimonialsContainer">
-        <p style="font-weight: bold; color: #333333">“He knows exactly what he's doing when <br> he's doing it.”</p>
-        <p style="margin-top: 8px;">Elliot HALLER - Rock Don’t Stock</p>
+      <div class="featuresContainer">
+        <ul>
+          <li>
+            <img class="checkIcon" src="check icon.svg" alt="check icon" />
+            <p style="color: #333333">Visual design audit with a fresh eye.</p>
+          </li>
+          <li>
+            <img class="checkIcon" src="check icon.svg" alt="check icon" />
+            <p style="color: #333333">Spot tiny design missings.</p>
+          </li>
+          <li>
+            <img class="checkIcon" src="check icon.svg" alt="check icon" />
+            <p style="color: #333333">Tips & improvement suggestions.</p>
+          </li>
+          <li>
+            <img class="checkIcon" src="check icon.svg" alt="check icon" />
+            <p style="color: #333333">Includes a redesign of one view.</p>
+          </li>
+          <li style="margin-bottom: 0px;">
+            <p>All packed in a Notion report</p>
+          </li>
+        </ul>
       </div>
 
+      <div class="priceContainer">
+        <div class="totalPriceContainer">
+          <p>Total price</p>
+          <p
+            style="font-size: 24px; line-height: 32px; font-weight: bold; color: #333333;"
+          >
+            $250
+          </p>
+        </div>
+        <a href="https://buy.stripe.com/3cs6qy9XW3b77ja6op" class="startButton"
+          >Get started</a
+        >
+        <p style="text-align: center; margin-top: 8px;">
+          duprez.hugo@gmail.com
+        </p>
+      </div>
     </div>
 
+    <div class="testimonialsContainer">
+      <p style="font-weight: bold; color: #333333">
+        “He knows exactly what he's doing when <br /> he's doing it.”
+      </p>
+      <p style="margin-top: 8px;">Elliot HALLER - Rock Don’t Stock</p>
+    </div>
+  </div>
 </div>
 
-
-
-
 <style>
-
   a {
     font-family: Inter;
     font-size: 12.8px;
@@ -183,14 +210,13 @@
     font-size: 24px;
     line-height: 32px;
     color: #333333;
-    
   }
 
   p {
     font-family: Inter;
     line-height: 16px;
     font-size: 12.8px;
-    color: #6F6F6F;
+    color: #6f6f6f;
   }
 
   .startButton {
@@ -228,21 +254,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
   }
 
   .priceContainer {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
-
   }
 
   .checkIcon {
     margin-right: 8px;
     width: 16px;
     height: 16px;
-
   }
 
   ul {
@@ -261,7 +284,6 @@
 
   .featuresContainer {
     margin-top: 24px;
-
   }
 
   .starImage {
@@ -315,20 +337,20 @@
   }
 
   .overlay {
-      pointer-events: none;
-      opacity: 0;
-      width: 100vw;
-      height: 200vh;
-      background-color: #2D2F53;
-      position: fixed;
-      z-index: 3;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    pointer-events: none;
+    opacity: 0;
+    width: 100vw;
+    height: 200vh;
+    background-color: #2d2f53;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .mainContainerWidget {
     cursor: pointer;
@@ -336,20 +358,27 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 8px 12px 8px 8px;
+    padding: 8px 8px 8px 8px;
 
     position: fixed;
     position: -webkit-fixed;
     right: 5%;
     bottom: 8%;
 
-    background: #333333;
+    background: white;
     border-radius: 50px;
 
+    box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.03),
+      0px 7.51997px 33.4221px rgba(0, 0, 0, 0.0215656),
+      0px 4.02054px 17.869px rgba(0, 0, 0, 0.0178832),
+      0px 2.25388px 10.0172px rgba(0, 0, 0, 0.015),
+      0px 1.19702px 5.32008px rgba(0, 0, 0, 0.0121168),
+      0px 0.498106px 2.21381px rgba(0, 0, 0, 0.00843437);
+
     font-family: Inter;
+    font-weight: bold;
     font-size: 12.2px;
     line-height: 16px;
-    color: white;
   }
 
   img {
@@ -367,18 +396,21 @@
     bottom: 50%;
     margin-bottom: -312px;
     border-radius: 40px;
-    box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.03), 0px 7.51997px 33.4221px rgba(0, 0, 0, 0.0215656), 0px 4.02054px 17.869px rgba(0, 0, 0, 0.0178832), 0px 2.25388px 10.0172px rgba(0, 0, 0, 0.015), 0px 1.19702px 5.32008px rgba(0, 0, 0, 0.0121168), 0px 0.498106px 2.21381px rgba(0, 0, 0, 0.00843437);
+    box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.03),
+      0px 7.51997px 33.4221px rgba(0, 0, 0, 0.0215656),
+      0px 4.02054px 17.869px rgba(0, 0, 0, 0.0178832),
+      0px 2.25388px 10.0172px rgba(0, 0, 0, 0.015),
+      0px 1.19702px 5.32008px rgba(0, 0, 0, 0.0121168),
+      0px 0.498106px 2.21381px rgba(0, 0, 0, 0.00843437);
   }
 
   @media screen and (max-width: 428px) {
-
     .contentContainer {
-    position: relative;
-    padding-top: 0px;
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-bottom: 48px;
-
+      position: relative;
+      padding-top: 0px;
+      padding-left: 48px;
+      padding-right: 48px;
+      padding-bottom: 48px;
     }
 
     .mainContainerWidget {
@@ -395,12 +427,16 @@
       overflow: scroll;
       height: 440px;
     }
-    
+
     .topBar {
       margin-bottom: 16px;
       height: 32px;
       position: sticky;
-      background: linear-gradient(180deg, #FFFFFF 8.85%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        180deg,
+        #ffffff 8.85%,
+        rgba(255, 255, 255, 0) 100%
+      );
       top: 0;
       left: 0;
       width: 100%;
@@ -416,7 +452,5 @@
       margin-top: 8px;
       border-radius: 50px;
     }
-
-
   }
 </style>
