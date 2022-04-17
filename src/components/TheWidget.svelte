@@ -5,7 +5,7 @@
   const enableWidget = true;
   let showOverlay = false;
 
-  //Get html elements for animations
+  //Init variables for node binding to get HTML elements
   let widget;
   let overlay;
   let modal;
@@ -35,7 +35,7 @@
           targets: modal,
           translateY: [50, 0],
           opacity: [0, 1],
-          duration: 2000,
+          duration: 1000,
         });
       } else {
         //animate modal in for mobile
@@ -62,7 +62,7 @@
           targets: modal,
           translateY: [-50],
           opacity: [1, 0],
-          duration: 2000,
+          duration: 1000,
         });
       } else {
         //animate modal out for mobile
@@ -80,10 +80,13 @@
   }
 </script>
 
+
+
+<!--Widget can be disabled with setting the enableWidget to false line 5-->
 {#if enableWidget}
   <div data-splitbee-event="Click widget" bind:this={widget} class="mainContainerWidget" on:click={switchModal}>
     <img height="24" width="24" src="me.png" alt="me" />
-    <p style="overflow:hidden; color : #333333; display : flex; flex-direction: row; justify-content:start align-items:center">Make your app more <img style="margin-left : 4px;" src="pop.png" alt="pop icon" height="16px"></p>
+    <p style="overflow:hidden; color : #02063B; display : flex; flex-direction: row; justify-content:start align-items:center">Make your app more <img style="margin-left : 4px;" src="pop.png" alt="pop icon" height="16px"></p>
   </div>
 {/if}
 
@@ -97,11 +100,11 @@
 
     <div class="mainContainer">
       <div class="headContainer">
-        <p class="title">1:1 design review of <br /> what you build</p>
+        <p class="title">I’ll help you to make <br> your app looks sweet</p>
         <div class="hugoContainer">
           <img height="40" width="40" src="me.png" alt="me" />
           <div class="rightContainer">
-            <a href="https://dribbble.com/HugoDuprez/shots" target="_blank"
+            <a href="https://dribbble.com/HugoDuprez/shots" target="_blank" style="color : #02063B;"
               >Hugo Duprez</a
             >
             <div class="starsContainer">
@@ -149,19 +152,19 @@
         <ul>
           <li>
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
-            <p style="color: #333333">Visual design audit with a fresh eye.</p>
+            <p style="color: #02063B">Visual design audit with a fresh eye.</p>
           </li>
           <li>
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
-            <p style="color: #333333">Spot tiny design missings.</p>
+            <p style="color: #02063B">Spot tiny design missings.</p>
           </li>
           <li>
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
-            <p style="color: #333333">Tips & improvement suggestions.</p>
+            <p style="color: #02063B">Tips & improvement suggestions.</p>
           </li>
           <li>
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
-            <p style="color: #333333">Includes a redesign of one view.</p>
+            <p style="color: #02063B">Includes a redesign of one view.</p>
           </li>
           <li style="margin-bottom: 0px;">
             <p>All packed in a Notion report</p>
@@ -173,7 +176,7 @@
         <div class="totalPriceContainer">
           <p>Total price</p>
           <p
-            style="font-size: 24px; line-height: 32px; font-weight: bold; color: #333333;"
+            style="font-size: 24px; line-height: 32px; font-weight: bold; color: #02063B;"
           >
             $250
           </p>
@@ -188,7 +191,7 @@
     </div>
 
     <div class="testimonialsContainer">
-      <p style="font-weight: bold; color: #333333">
+      <p style="font-weight: bold; color: #02063B">
         “He knows exactly what he's doing when <br /> he's doing it.”
       </p>
       <p style="margin-top: 8px;">Elliot HALLER - Rock Don’t Stock</p>
@@ -196,12 +199,14 @@
   </div>
 </div>
 
+
+
 <style>
   a {
     font-family: Inter;
     font-size: 12.8px;
     line-height: 16px;
-    color: #333333;
+    color: #02063B;
   }
 
   .title {
@@ -209,7 +214,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #333333;
+    color: #02063B;
   }
 
   p {

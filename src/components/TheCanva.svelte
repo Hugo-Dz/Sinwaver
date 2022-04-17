@@ -1,4 +1,5 @@
 <script>
+
   import CursorValues from "../stores/CursorValuesStore";
   import SVGpath from "../stores/SVGpathStore";
 
@@ -14,7 +15,7 @@
 
   let storedValues;
 
-  //Utiliser mon store pour attriber ses valeurs à une variable de ce composant. Si le store change, il est rafraichi automatiquement
+  //Get inputs values stored in the CursorValuesStore
   CursorValues.subscribe((dataFromStore) => {
     storedValues = dataFromStore;
   });
@@ -36,16 +37,17 @@
 
   //DRAWING LOGIC
   
-  let canvas; //On créer la var canvas que l'on va binder dans le canvas html (uniquement pour le dessins pixels)
-  let strokeColor = "#333333";
+  let canvas;
+  let strokeColor = "#02063B";
 
-  //Each time data store refreshed:
+  //Each time SVG path data store is refreshed:
   afterUpdate(() => {
     deleteOldCurve();
     drawCurve();
     caluclateSVG();
   });
 
+  //Draw the curve on the canvas, this will be a bitmap image an not a SVG
   function drawCurve() {
     let context = canvas.getContext("2d");
 
@@ -72,7 +74,7 @@
     context.stroke();
   }
 
-  //Path will be stored to let home page access it
+  //Replicate the drawing but in SVG format and store it to the svg data store
   function caluclateSVG() {
     let context = new C2S(canvasSize.width, canvasSize.height);
 
@@ -107,6 +109,7 @@
     });
   }
 
+  //Clear the canvas
   function deleteOldCurve() {
     const context = canvas.getContext("2d");
 
@@ -117,12 +120,11 @@
 
 
 
-
 <div class="canvasContainer">
   <canvas id="canvas" bind:this={canvas} width={canvasSize.width} height={canvasSize.height} />
 </div>
 
-<!--DEBUG MODE ONLY-->
+<!--DEBUG MODE ONLY, SET debugMode variable to true line 10-->
 
 {#if debugMode}
   <div class="tempoInfos">
@@ -140,6 +142,8 @@
     </p>
   </div>
 {/if}
+
+
 
 <style>
   .canvasContainer {

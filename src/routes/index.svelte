@@ -1,4 +1,5 @@
 <script>
+  
   import SVGpath from "../stores/SVGpathStore";
 
   import TheCanva from "../components/TheCanva.svelte";
@@ -7,7 +8,7 @@
 
   let storedSVGpath;
 
-  //Utiliser mes stores pour attriber leurs valeurs à une variable de ce composant. Si les stores changent, il sont rafraichis automatiquement
+  //Access store where SVG path is stored and updated
   SVGpath.subscribe((dataFromStore) => {
     storedSVGpath = dataFromStore;
   });
@@ -32,7 +33,6 @@
   }
 
 </script>
-
 
 
 

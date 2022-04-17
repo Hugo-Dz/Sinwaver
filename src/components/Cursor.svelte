@@ -1,4 +1,5 @@
 <script>
+
   import CursorValues from "../stores/CursorValuesStore";
 
   export let minIconPath;
@@ -6,7 +7,7 @@
   export let minValue;
   export let maxValue;
   export let initialValue;
-  export let cursorSetting; //Each instance of cursor have this unique ID provided by an attribute in the parent
+  export let cursorSetting; //Each instance of cursor have this unique ID provided by the cursorSetting attribute in the parent
 
 
   let cursorValue = initialValue; //For init progress bar position
@@ -14,7 +15,7 @@
   $: progressBarWidth = (cursorValue*80) / maxValue;
 
 
-  //Update store relatively to the ID
+  //Update store relatively to the ID. Each time a slider input is moved
   function udpateStore() {
     switch (cursorSetting) {
       case "amplitudeValue" : 
@@ -40,7 +41,6 @@
     }
   }
 
-
 </script>
 
 
@@ -55,6 +55,8 @@
 
 
 </div>
+
+
 
 <style>
 

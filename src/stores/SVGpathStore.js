@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-//Storage of the SVG path, updated every time the pixel path is updated (each time an input move)
+//Storage of the SVG path, updated every time the path is recalculated (each time an input move)
 
 const SVGpath = writable();
 
