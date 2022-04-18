@@ -166,7 +166,7 @@
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
             <p style="color: #02063B">Includes a redesign of one view.</p>
           </li>
-          <li style="margin-bottom: 0px;">
+          <li style="margin-bottom: 0px; color: #55576D;">
             <p>All packed in a Notion report</p>
           </li>
         </ul>
@@ -174,7 +174,7 @@
 
       <div class="priceContainer">
         <div class="totalPriceContainer">
-          <p>Total price</p>
+          <p style="color : 55576D;">Total price</p>
           <p
             style="font-size: 24px; line-height: 32px; font-weight: bold; color: #02063B;"
           >
@@ -194,7 +194,7 @@
       <p style="font-weight: bold; color: #02063B">
         “He knows exactly what he's doing when <br /> he's doing it.”
       </p>
-      <p style="margin-top: 8px;">Elliot HALLER - Rock Don’t Stock</p>
+      <p style="margin-top: 8px; color : 55576D;">Elliot HALLER - Rock Don’t Stock</p>
     </div>
   </div>
 </div>
