@@ -3,7 +3,7 @@
 ![image of the application](https://i.ibb.co/z74W5CW/OG-image.png)
 
 - [Live app](https://www.sinwaver.com/)
-- [Figma design](
+- [Figma design](https://www.figma.com/community/file/1097896347873166443)
 - [Complete breakdown on Medium](https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb)
 
 <br />
