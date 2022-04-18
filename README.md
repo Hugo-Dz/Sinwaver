@@ -57,6 +57,10 @@ You need npm package manager before starting. Run the following command in your 
    ```sh
    npm install
    ```
+4. Start the app
+   ```sh
+   npm run dev
+   ```
 
 <br />
 
