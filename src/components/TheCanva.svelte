@@ -35,7 +35,9 @@
   }
   
 
-  //DRAWING LOGIC
+  //DRAWING LOGIC:
+  //One function for display the curve (raster)
+  //One function for draw the curve as a SVG path for export
   
   let canvas;
   let strokeColor = "#02063B";
@@ -146,6 +148,7 @@
 
 
 <style>
+
   .canvasContainer {
     margin-bottom: 32px;
   }
@@ -193,4 +196,5 @@
     }
 
   }
+
 </style>

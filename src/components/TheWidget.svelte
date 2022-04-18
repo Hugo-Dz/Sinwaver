@@ -1,4 +1,5 @@
 <script>
+
   import { onMount, afterUpdate } from "svelte/internal";
   import anime from "animejs";
 
@@ -30,7 +31,7 @@
         easing: "easeInOutQuad",
       });
       if (window.screen.width > 430) {
-        //animate modal in for desktop
+        //animate modal-in for desktop
         let modalIn = anime({
           targets: modal,
           translateY: [50, 0],
@@ -38,7 +39,7 @@
           duration: 1000,
         });
       } else {
-        //animate modal in for mobile
+        //animate modal-in for mobile
         let modalInMobile = anime({
           targets: modal,
           translateY: [500, 0],
@@ -57,7 +58,7 @@
         easing: "easeInOutQuad",
       });
       if (window.screen.width > 430) {
-        //animate modal out for desktop
+        //animate modal-out for desktop
         let modalOut = anime({
           targets: modal,
           translateY: [-50],
@@ -65,7 +66,7 @@
           duration: 1000,
         });
       } else {
-        //animate modal out for mobile
+        //animate modal-out for mobile
         let modalOutMobile = anime({
           targets: modal,
           translateY: [0, 500],
@@ -78,11 +79,12 @@
       modal.style.pointerEvents = "none";
     }
   }
+
 </script>
 
 
 
-<!--Widget can be disabled with setting the enableWidget to false line 5-->
+<!--Widget can be disabled with setting the enableWidget variable to false line 5-->
 {#if enableWidget}
   <div data-splitbee-event="Click widget" bind:this={widget} class="mainContainerWidget" on:click={switchModal}>
     <img height="24" width="24" src="me.png" alt="me" />

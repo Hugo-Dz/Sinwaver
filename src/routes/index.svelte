@@ -8,7 +8,7 @@
 
   let storedSVGpath;
 
-  //Access store where SVG path is stored and updated
+  //Access the store where SVG path is stored and updated
   SVGpath.subscribe((dataFromStore) => {
     storedSVGpath = dataFromStore;
   });
@@ -30,6 +30,7 @@
     setTimeout(function () {
       URL.revokeObjectURL(a.href);
     }, 1500);
+
   }
 
 </script>
@@ -40,7 +41,6 @@
   
   <div class="contentContainer">
 
-
     <a data-splitbee-event="Click Medium link" href="https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb" target="_blank">
       <div class="linkContainer">
         <p>How this app was made</p>
@@ -48,14 +48,15 @@
       </div>
     </a>
 
-
     <TheCanva />
     <TheSettings />
 
     <button data-splitbee-event="Click CTA" on:click={downloadSVGpath} class="exportButton"><img width="24" height="24" src="/export icon.svg" alt="export icon" />Export</button>
 
     <TheWidget />
+
   </div>
+  
 </div>
 
 <style>

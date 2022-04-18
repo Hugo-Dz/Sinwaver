@@ -15,7 +15,7 @@
   $: progressBarWidth = (cursorValue*80) / maxValue;
 
 
-  //Update store relatively to the ID. Each time a slider input is moved
+  //Update store relatively to the ID of the cursor. Each time a slider input is moved
   function udpateStore() {
     switch (cursorSetting) {
       case "amplitudeValue" : 

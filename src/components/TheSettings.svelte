@@ -1,14 +1,14 @@
 <script>
+
   import Cursor from "../components/Cursor.svelte";
   import CursorValues from "../stores/CursorValuesStore";
 
   let storedValues;
 
-  //Utiliser mon store pour attriber ses valeurs à une variable de ce composant. Si le store change, il est rafraichi automatiquement
+  //Use the store where all the initial value of sliders are stored
   CursorValues.subscribe((dataFromStore) => {
     storedValues = dataFromStore;
   });
-
 
 </script>
 
@@ -55,6 +55,5 @@
     }
 
   }
-
 
 </style>
