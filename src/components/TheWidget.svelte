@@ -102,7 +102,7 @@
 
     <div class="mainContainer">
       <div class="headContainer">
-        <p class="title">I’ll help you to make <br> your app looks sweet</p>
+        <p class="title">I’ll help you to make <br> your app look sweet</p>
         <div class="hugoContainer">
           <img height="40" width="40" src="me.png" alt="me" />
           <div class="rightContainer">
@@ -158,7 +158,7 @@
           </li>
           <li>
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
-            <p style="color: #02063B">Spot tiny design missings.</p>
+            <p style="color: #02063B">Spot tiny design mistakes.</p>
           </li>
           <li>
             <img class="checkIcon" src="check icon.svg" alt="check icon" />
