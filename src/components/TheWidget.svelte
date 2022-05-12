@@ -88,7 +88,7 @@
 {#if enableWidget}
   <div data-splitbee-event="Click widget" bind:this={widget} class="mainContainerWidget" on:click={switchModal}>
     <img height="24" width="24" src="me.png" alt="me" />
-    <p style="overflow:hidden; color : #02063B; display : flex; flex-direction: row; justify-content:start align-items:center">Make your app more <img style="margin-left : 4px;" src="pop.png" alt="pop icon" height="16px"></p>
+    <p style="overflow:hidden; color : #02063B; display : flex; flex-direction: row; justify-content:start align-items:center">Make your app more <img style="margin-left : 4px;" src="pop.png" alt="pop icon" height="16" width="16"></p>
   </div>
 {/if}
 
