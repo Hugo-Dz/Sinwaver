@@ -106,7 +106,7 @@
         <div class="hugoContainer">
           <img height="40" width="40" src="me.png" alt="me" />
           <div class="rightContainer">
-            <a href="https://dribbble.com/HugoDuprez/shots" target="_blank" style="color : #02063B;"
+            <a href="https://www.hugoduprez.com/" data-splitbee-event="Visit personal website" target="_blank" style="color : #02063B;"
               >Hugo Duprez</a
             >
             <div class="starsContainer">
