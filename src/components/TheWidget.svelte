@@ -3,7 +3,7 @@
   import { onMount, afterUpdate } from "svelte/internal";
   import anime from "animejs";
 
-  const enableWidget = true;
+  const enableWidget = false;
   let showOverlay = false;
 
   //Init variables for node binding to get HTML elements

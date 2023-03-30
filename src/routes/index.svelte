@@ -41,9 +41,9 @@
   
   <div class="contentContainer">
 
-    <a data-splitbee-event="Click Medium link" href="https://bootcamp.uxdesign.cc/coding-is-an-underrated-tool-for-designers-bda15fee44eb" target="_blank">
+    <a data-splitbee-event="Click Hugo link" href="https://twitter.com/HugoDuprez" target="_blank">
       <div class="linkContainer">
-        <p>How this app was made</p>
+        <p>Made by Hugo</p>
         <img height="12" width="12" src="arrow.svg" alt="arrow icon" />
       </div>
     </a>
