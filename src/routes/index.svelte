@@ -41,7 +41,7 @@
   
   <div class="contentContainer">
 
-    <a data-splitbee-event="Click Hugo link" href="https://twitter.com/HugoDuprez" target="_blank">
+    <a data-splitbee-event="Click Hugo link" href="https://www.hugoduprez.com/" target="_blank">
       <div class="linkContainer">
         <p>Made by Hugo</p>
         <img height="12" width="12" src="arrow.svg" alt="arrow icon" />
